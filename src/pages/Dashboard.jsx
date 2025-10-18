@@ -54,7 +54,7 @@ export default function AdminDashboard() {
   try {
     const token = localStorage.getItem("adminToken");
     if (!token) throw new Error("No admin token found");
-    const res = await axios.get("http://localhost:5050/api/admin/stats", {
+    const res = await axios.get("https://admindashboard-backend-dfdq.onrender.com/api/admin/stats", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -80,7 +80,7 @@ export default function AdminDashboard() {
   try {
     const token = localStorage.getItem("adminToken");
     if (!token) throw new Error("No admin token found");
-    const res = await axios.get(`http://localhost:5050/api/admin/logs`, {
+    const res = await axios.get(`https://admindashboard-backend-dfdq.onrender.com/api/admin/logs`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -111,7 +111,7 @@ export default function AdminDashboard() {
     const token = localStorage.getItem("adminToken");
     if (!token) throw new Error("No admin token found");
     const res = await axios.post(
-      `http://localhost:5050/api/admin/freeze/${emailInput.trim()}`,
+      `https://admindashboard-backend-dfdq.onrender.com/api/admin/freeze/${emailInput.trim()}`,
       {
         freeze,
         reason: freeze ? "Frozen by admin via dashboard" : "Unfrozen by admin",

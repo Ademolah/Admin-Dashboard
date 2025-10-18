@@ -19,7 +19,7 @@ const AdminLogin = () => {
   setError("");
   try {
     console.log("Submitting login...");
-    const res = await fetch("http://localhost:5050/api/admin/login", {
+    const res = await fetch("https://admindashboard-backend-dfdq.onrender.com/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
