@@ -193,15 +193,16 @@ export default function AdminDashboard() {
         <div className="flex flex-col items-start gap-2">
             <div className="flex items-center gap-3">
                 <Badge className="bg-white border px-3 py-2 text-sm text-gray-700">Admin</Badge>
-                <div className="text-sm text-gray-600">Signed in</div>
-            </div>
-            <button
+                {/* <div className="text-sm text-gray-600">Signed in</div> */}
+                <button
                 onClick={handleSignOut}  // You'll define this function
                 className="text-sm text-red-600 hover:underline"
             >
                 Sign Out
             </button>
             </div>
+            
+          </div>
       </header>
       {/* Stats grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
